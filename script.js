@@ -1,6 +1,6 @@
 //https://riki.edu.vn/minna-no-nihongo/
 
-const quiz= document.getElementById('quiz')
+const quiz = document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
 const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
@@ -25,19 +25,19 @@ function loadQuiz() {
     let randomIndex1, randomIndex2, randomIndex3;
     while (true) {
         randomIndex1 = Math.floor(Math.random() * quizData.length);
-        if  (randomIndex1 != currentQuiz) {
+        if (randomIndex1 != currentQuiz) {
             break;
         }
     }
     while (true) {
         randomIndex2 = Math.floor(Math.random() * quizData.length);
-        if  (randomIndex2 != randomIndex1 && randomIndex2 != currentQuiz) {
+        if (randomIndex2 != randomIndex1 && randomIndex2 != currentQuiz) {
             break;
         }
     }
     while (true) {
         randomIndex3 = Math.floor(Math.random() * quizData.length);
-        if  (randomIndex3 != randomIndex1 && randomIndex3 != randomIndex2 && randomIndex3 != currentQuiz) {
+        if (randomIndex3 != randomIndex1 && randomIndex3 != randomIndex2 && randomIndex3 != currentQuiz) {
             break;
         }
     }
@@ -48,7 +48,7 @@ function loadQuiz() {
         quizData[randomIndex3][1]
     ]);
 
-    questionEl.innerText = (currentQuiz + 1) + '. ' + currentQuizData[0] ;
+    questionEl.innerText = (currentQuiz + 1) + '. ' + currentQuizData[0];
     a_text.innerText = '1. ' + listAns[0];
     b_text.innerText = '2. ' + listAns[1];
     c_text.innerText = '3. ' + listAns[2];
@@ -62,7 +62,7 @@ function deselectAnswers() {
 function getSelected() {
     let answer
     answerEls.forEach(answerEl => {
-        if(answerEl.checked) {
+        if (answerEl.checked) {
             answer = document.getElementById(answerEl.id + '_text').innerHTML.slice(3);
         }
     })
@@ -72,37 +72,42 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
-    if(answer) {
-       if(answer === quizData[currentQuiz][1]) {
-           score++
-       }
+    if (answer) {
+        resetColor();
+        if (answer === quizData[currentQuiz][1]) {
+            score++
+        }
 
-       currentQuiz++
+        currentQuiz++
 
-       if(currentQuiz < quizData.length) {
-           loadQuiz()
-       } else {
-           quiz.innerHTML = `
+        if (currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
            <h2>You answered ${score}/${quizData.length} questions correctly</h2>
 
            <button id="reload" onclick="location.reload()">Reload</button>
            `;
-           document.addEventListener('keydown', (e) => {
-            if (e.key == 'Enter') {
-                document.getElementById('reload').click();
-            } 
-        })
-       }
+            document.addEventListener('keydown', (e) => {
+                if (e.key == 'Enter') {
+                    document.getElementById('reload').click();
+                }
+            })
+        }
     }
 });
 
 $('.answer').on('change', ansChange);
 
-function ansChange(e) {
+function resetColor() {
     document.getElementById('a_text').style.color = 'black';
     document.getElementById('b_text').style.color = 'black';
     document.getElementById('c_text').style.color = 'black';
     document.getElementById('d_text').style.color = 'black';
+}
+
+function ansChange(e) {
+    resetColor();
     let ans = getSelected();
     if (ans == quizData[currentQuiz][1]) {
         document.getElementById(e.target.id + '_text').style.color = 'blue';
@@ -121,10 +126,7 @@ document.addEventListener('keydown', (e) => {
     } else if (e.key == '4') {
         document.getElementById('d_text').click();
     } else if (e.key == 'Enter') {
-        document.getElementById('a_text').style.color = 'black';
-        document.getElementById('b_text').style.color = 'black';
-        document.getElementById('c_text').style.color = 'black';
-        document.getElementById('d_text').style.color = 'black';
+        resetColor();
         document.activeElement.blur();
         submitBtn.click();
     }

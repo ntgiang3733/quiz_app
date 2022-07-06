@@ -1,11 +1,18 @@
 let quizData = [
 ];
 
-let hiragana = ['おきます', 'ねます', 'はたらきます', 'やすみます', 'べんきょうします', 'おわります', 'デパート', 'ぎんこう', 'ゆうびんきょく', 'としょかん', 'びじゅつかん', 'でんわばんごう', 'なんばん', 'いま', '～じ', '～ふん / ～ぷん', 'はん', 'なんじ', 'なんぷん', 'ごぜん', 'ごご', 'あさ', 'ひる', 'ばん', 'よる', 'おととい', 'きのう', 'きょう', 'あした', 'あさって', 'けさ', 'こんばん', 'ゆうべ', 'やすみ', 'ひるやすみ', 'まいあさ', 'まいばん', 'まいにち', 'ペキン', 'バンコク', 'ロンドン', 'ロサンゼルス', 'たいへんですね', 'ばんごうあんない', 'おといあわせ'];
-let viet1 = ['thức dậy', 'ngủ', 'làm việc', 'nghỉ ngơi', 'học tập', 'kết thúc', 'cửa hàng bách hóa', 'ngân hàng', 'bưu điện', 'thư viện', 'viện bảo tàng', 'số điện thoại', 'số mấy', 'bây giờ', '~giờ', '～phút', 'phân nửa', 'mấy giờ', 'mấy phút', 'sáng (AM: trước 12 giờ)', 'chiều (PM: sau 12 giờ)', 'sáng', 'trưa', 'tối', 'tối', 'ngày hôm kia', 'ngày hôm qua', 'hôm nay', 'ngày mai', 'ngày mốt', 'sáng nay', 'tối nay', 'tối hôm qua', 'nghỉ ngơi (danh từ)', 'nghỉ trưa', 'mỗi sáng', 'mỗi tối', 'mỗi ngày', 'Bắc Kinh', 'Bangkok', 'Luân Đôn', 'Los Angeles', 'vất vả nhỉ', 'dịch vụ 116 (hỏi số điện thoại)', '(số điện thoại) bạn muốn biết / hỏi là'];
-let viet2 = ['o ki ma su', 'ne ma su', 'ha ta ra ki ma su', 'ya su mi ma su', 'ben kiyo chi ma su', 'o wa ri ma su', 'de po to', 'ghin ko', 'yu bin kiyo ku', 'to chiyo kan', 'bi ziyu tsu ken', 'den wa ban go', 'nan ban', 'i ma', 'zi', 'fun/pun', 'han', 'nan zi', 'nan pun', 'go zen', 'go go', 'a sa', 'hi ru', 'ban', 'yo ru', 'o to toi', 'ki no', 'kiyo', 'a shi ta', 'a sat te', 'ke sa', 'kon ban', 'yu bi ', 'ya su mi  ', 'hi ru ya su mi', 'mai a sa', 'mai ban', 'mai ni sa', 'pe kin', 'ban ko ku', 'ron don', 'ro san ze ru nu', 'tai hen de su ne', 'ban go an nai', 'o toi a wa se']
+let hiragana = [
+    'ばんせん', 'いきます', 'きます', 'かえります', 'がっこう', 'スーパー', 'えき', 'ひこうき', 'ふね', 'でんしゃ', 'ちかてつ', 'しんかんせん', 'バス', 'タクシー', 'じてんしゃ', 'あるいて', 'ひと', 'ともだち', 'かれ', 'かのじょ', 'かぞく', 'せんしゅう', 'こんしゅう', 'らいしゅう', 'せんげつ', 'こんげつ', 'らいげつ', 'きょねん', 'ことし', 'らいねん', '―がつ', 'なんがつ', 'ついたち', 'ふつか', 'みっか', 'よっか', 'いつか', 'むいか', 'なのか', 'ようか', 'ここのか', 'とおか', 'じゅうよっか', 'はつか', 'にじゅうよっか', '―にち', 'なんにち', 'いつ', 'たんじょうび', 'ふつう', 'きゅうこう', 'とっきゅう', 'つぎの', 'どういたしまして'
+];
+let viet1 = [
+    'sân ga số –', 'đi', 'đến', 'về', 'trường học', 'siêu thị', 'ga, nhà ga', 'máy bay', 'thuyền, tàu thủy', 'tàu điện', 'tàu điện ngầm', 'tàu Shinkansen (tàu điện siêu tốc của Nhật)', 'xe Buýt', 'tắc-xi', 'xe đạp', 'đi bộ', 'người', 'bạn, bạn bè', 'anh ấy, bạn trai', 'chị ấy, bạn gái', 'gia đình', 'tuần trước', 'tuần này', 'tuần sau', 'tháng trước', 'tháng này', 'tháng sau', 'năm ngoái', 'năm nay', 'năm sau', 'tháng –', 'tháng mấy', 'ngày mồng 1', 'ngày mồng 2, 2 ngày', 'ngày mồng 3, 3 ngày', 'ngày mồng 4, 4 ngày', 'ngày mồng 5, 5 ngày', 'ngày mồng 6, 6 ngày', 'ngày mồng 7, 7 ngày', 'ngày mồng 8, 8 ngày', 'ngày mồng 9, 9 ngày', 'ngày mồng 10, 10 ngày', 'ngày 14, 14 ngày', 'ngày 20, 20 ngày', 'ngày 24, 24 ngày', 'ngày -, – ngày', 'ngày mấy, ngày bao nhiêu, mấy ngày, bao nhiêu ngày', 'bao giờ, khi nào', 'sinh nhật', 'tàu thường (dừng cả ở các ga lẻ)', 'tàu tốc hành', 'tàu tốc hành đặc biệt', 'tiếp theo', 'Không có chi'
+];
+let viet2 = [
+    'ban sen', 'i ki ma su', 'ki ma su', 'ka e ri ma su', 'gak ko', 'su pa', 'e ki', 'hi ko ki', 'fu ne', 'den shiya', 'chi ka te tsu', 'shin kan sen', 'ba su', 'ta ku shi', 'zi ten shiya', 'a rui te', 'hi to', 'to mo da chi', 'ka re', 'ka no ziyo', 'ka zo ku', 'sen shiyu', 'kon shiyu', 'rai shiyu', 'sen ge tsu', 'kon ge tsu', 'rai ge tsu', 'kiyo nen', 'ko to shi', 'rai nen', 'ga tsu', 'nan ga tsu', 'tsu i ta chi', 'fu tsu ka', 'mik ka', 'yok ka', 'I tsu ka', 'mui ka', 'na no ka', 'yo ka', 'ko ko no ka', 'to o ka', 'shiyu yok ka', 'ha tsu ka', 'ni shiyu yok ka', 'ni chi', 'nan ni chi', 'i tsu   ', 'tan ziyo bi', 'fu tsu  ', 'kiyu ko', 'tok kiyu', 'tsu gi no', 'doi  ta shi ma shi ta'
+];
 hiragana.forEach((item, idx) => {
     // if (idx >= 10) return;
+    if (idx < 20 || idx >= 30) return;
     quizData.push([
         viet1[idx], 
         // item , 
