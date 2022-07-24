@@ -34,19 +34,30 @@ var quizData = [
 // ];
 
 //---------------------------Bai 3-----------------------------
+// var hiragana = [
+//     'ここ', 'そこ', 'あそこ', 'どこ', 'こちら', 'そちら', 'あちら', 'どちら', 'きょうしつ', 'しょくどう', 'じむしょ', 'かいぎしつ', 'うけつけ', 'ロビー', 'へや', 'トイレ（おてあらい）', 'かいだん', 'エレベーター', 'エスカレーター', '[お]くに', 'かいしゃ', 'うち', 'でんわ', 'くつ', 'ネクタイ', 'ワイン', 'たばこ', 'うりば', 'ちか', '―かい（－がい）', 'なんがい', '―えん', 'いくら', 'ひゃく', 'せん', 'まん', 'すみません', '～でございます', 'みせてください', 'じゃ', '[～を]ください', 'しんおおさか', 'イタリア', 'スイス'
+// ];
+// var viet1 = [
+//     'chỗ này, đây', 'chỗ đó, đó', 'chỗ kia, kia', 'chỗ nào, đâu', 'phía này, đằng này, chỗ này, đây (là cách nói lịch sự của ここ)', 'phía đó, đằng đó, chỗ đó, đó (là cách nói lịch sự của そこ)', 'phía kia, đằng kia, chỗ kia, kia (cách nói lịch sự của あそこ)', 'phía nào, đằng nào, chỗ nào, đâu (cách nói lịch sự của どこ )', 'lớp học, phòng học', 'nhà ăn', 'văn phòng', 'phòng họp', 'bộ phận tiếp tân, phòng thường trực, lễ tân', 'hành lang, đại sảnh', 'căn phòng', 'nhà vệ sinh, phòng vệ sinh, toa-lét', 'cầu thang', 'thang máy', 'thang cuốn', 'đất nước', 'công ty', 'nhà', 'máy điện thoại, điện thoại', 'giày', 'cà vạt', 'rượu vang', 'thuốc lá', 'quầy bán (trong một cửa hàng bách hóa)', 'tầng hầm, dưới mặt đất', 'tầng thứ –', 'tầng mấy', 'yên', 'bao nhiêu tiền', 'trăm', 'nghìn', 'mười nghìn, vạn', 'Xin lỗi', '(cách nói lịch sự của 「です」)', 'cho tôi xem [~]', 'Thế thì, vậy thì', 'cho tôi [~]', 'tên một nhà ga ở Osaka', 'Ý', 'Thụy Sĩ'
+// ];
+// var viet2 = [
+//     'ko ko', 'so ko', 'a so ko', 'do ko', 'ko chi ra', 'so chi ra', 'a chi ra', 'do chi ra', 'kiyo shi tsu', 'shiyo ku do', 'zi mu shiyo', 'kai ghi shi tsu', 'e ke tsu ke', 'ro bi', 'he ya', 'toi re (o te a rai)', 'kai dan', 'e re be ta', 'e su ka re ta', 'o ku ni', 'kai shiya', 'u chi', 'den wa', 'ku tsu', 'ne ku tai', 'wa in', 'ta ba ko', 'u ri ba', 'sa ka', 'kai (gai)', 'nan gai', 'en', 'I ku ra', 'hiya ku', 'sen', 'man', 'su mi ma sen', 'de go zai ma si', 'mi se te ku da sai', 'ziya', '[wo] ku da sai', 'shin o o sa ka', 'I ta ri a', 'sui su'
+// ];
+
+//---------------------------Bai 3-----------------------------
 var hiragana = [
-    'ここ', 'そこ', 'あそこ', 'どこ', 'こちら', 'そちら', 'あちら', 'どちら', 'きょうしつ', 'しょくどう', 'じむしょ', 'かいぎしつ', 'うけつけ', 'ロビー', 'へや', 'トイレ（おてあらい）', 'かいだん', 'エレベーター', 'エスカレーター', '[お]くに', 'かいしゃ', 'うち', 'でんわ', 'くつ', 'ネクタイ', 'ワイン', 'たばこ', 'うりば', 'ちか', '―かい（－がい）', 'なんがい', '―えん', 'いくら', 'ひゃく', 'せん', 'まん', 'すみません', '～でございます', 'みせてください', 'じゃ', '[～を]ください', 'しんおおさか', 'イタリア', 'スイス'
+    'たべます', 'のみます', 'すいます [たばこを～]', 'みます', 'ききます', 'よみます', 'かきます', 'かいます', 'とります [しゃしんを～]', 'します', 'あいます [ともだちに～]', 'ごはん', 'あさごはん', 'ひるごはん', 'ばんごはん', 'パン', 'たまご', 'にく', 'さかな', 'やさい', 'くだもの', 'みず', 'おちゃ', 'こうちゃ', 'ぎゅうにゅう (ミルク)', 'ジュース', 'ビール', '[お]さけ', 'ビデオ', 'えいが', 'ＣＤ', 'てがみ', 'レポート', 'しゃしん', 'みせ', 'レストラン', 'にわ', 'しゅくだい', 'テニス', 'サッカー', '[お]はなみ', 'なに', 'いっしょに', 'ちょっと', 'いつも', 'ときどき', 'それから', 'ええ', 'いいですね。', 'わかりました。', 'なんですか', 'じゃ、また[あした]。', 'メキシコ'
 ];
 var viet1 = [
-    'chỗ này, đây', 'chỗ đó, đó', 'chỗ kia, kia', 'chỗ nào, đâu', 'phía này, đằng này, chỗ này, đây (là cách nói lịch sự của ここ)', 'phía đó, đằng đó, chỗ đó, đó (là cách nói lịch sự của そこ)', 'phía kia, đằng kia, chỗ kia, kia (cách nói lịch sự của あそこ)', 'phía nào, đằng nào, chỗ nào, đâu (cách nói lịch sự của どこ )', 'lớp học, phòng học', 'nhà ăn', 'văn phòng', 'phòng họp', 'bộ phận tiếp tân, phòng thường trực, lễ tân', 'hành lang, đại sảnh', 'căn phòng', 'nhà vệ sinh, phòng vệ sinh, toa-lét', 'cầu thang', 'thang máy', 'thang cuốn', 'đất nước', 'công ty', 'nhà', 'máy điện thoại, điện thoại', 'giày', 'cà vạt', 'rượu vang', 'thuốc lá', 'quầy bán (trong một cửa hàng bách hóa)', 'tầng hầm, dưới mặt đất', 'tầng thứ –', 'tầng mấy', 'yên', 'bao nhiêu tiền', 'trăm', 'nghìn', 'mười nghìn, vạn', 'Xin lỗi', '(cách nói lịch sự của 「です」)', 'cho tôi xem [~]', 'Thế thì, vậy thì', 'cho tôi [~]', 'tên một nhà ga ở Osaka', 'Ý', 'Thụy Sĩ'
+    'ăn', 'uống', 'hút [thuốc lá]', 'xem, nhìn, trông', 'nghe', 'đọc', 'viết, vẽ', 'mua', 'chụp [ảnh]', 'làm', 'gặp [bạn]', 'cơm, bữa ăn', 'cơm sáng', 'cơm trưa', 'cơm tối', 'bánh mì', 'trứng', 'thịt', 'cá', 'rau', 'hoa quả, trái cây', 'nước', 'trà (nói chung)', 'trà đen', 'sữa bò', 'nước hoa quả', 'bia', 'rượu, rượu sake', 'video, băng video, đầu video', ' phim, điện ảnh', 'đĩa CD', 'thư', 'báo cáo', 'ảnh', 'cửa hàng, tiệm', 'nhà hàng', 'vườn', 'bài tập về nhà (～をします: làm bài tập)', 'quần vợt (～をします: đánh quần vợt)', 'bóng đá (～をします: chơi bóng đá)', 'việc ngắm hoa anh đào (～をします: ngắm hoa anh đào)', 'cái gì, gì', 'cùng, cùng nhau', 'một chút', 'luôn luôn, lúc nào cũng', 'thỉnh thoảng', 'sau đó, tiếp theo', 'vâng, được (cách nói thân mật của 「はい」)', 'Được đấy nhỉ./ hay quá.', 'Tôi hiểu rồi/ vâng ạ.', 'Có gì đấy ạ?/ cái gì vậy?/ vâng có tôi. (câu trả lời khi ai đó gọi tên mình)', 'Hẹn gặp lại [ngày mai].', 'Mexico'
 ];
 var viet2 = [
-    'ko ko', 'so ko', 'a so ko', 'do ko', 'ko chi ra', 'so chi ra', 'a chi ra', 'do chi ra', 'kiyo shi tsu', 'shiyo ku do', 'zi mu shiyo', 'kai ghi shi tsu', 'e ke tsu ke', 'ro bi', 'he ya', 'toi re (o te a rai)', 'kai dan', 'e re be ta', 'e su ka re ta', 'o ku ni', 'kai shiya', 'u chi', 'den wa', 'ku tsu', 'ne ku tai', 'wa in', 'ta ba ko', 'u ri ba', 'sa ka', 'kai (gai)', 'nan gai', 'en', 'I ku ra', 'hiya ku', 'sen', 'man', 'su mi ma sen', 'de go zai ma si', 'mi se te ku da sai', 'ziya', '[wo] ku da sai', 'shin o o sa ka', 'I ta ri a', 'sui su'
+    'ta be masu', 'no mi masu', 'sui masu', 'mi masu', 'ki ki masu', 'yo mi masu', 'ka ki masu', 'kai masu', 'to ri masu', 'shi masu', 'ai masu', 'go han', 'a sa go han', 'hi ru go han', 'ban go han', 'pan', 'ta ma go', 'ni ku', 'sa ka na', 'ya sai', 'ku da mo no', 'mi zu', 'o sya', 'go sya', 'ghiyu niyu (mi ru ku)', 'ziyu su', 'bi-ru', 'o sa ke', 'bi di o', 'ei ga', 'CD', 'te ga mi', 're bo- to', 'shiya shin', 'mi se', 're su to ran', 'ni wa', 'shiyu ku dai', 'te ni su', 'sak ka-', 'o ha na mi', 'na ni', 'is shiyo ni', 'sayos to', 'I tsu mo', 'to ki do ki', 'so re ka ra', 'ee', 'I de su ne', 'wa ka ri masu shi ta', 'na de su ka', 'ziya ma ta ', 'me ki shi ko'
 ];
 
 hiragana.forEach((item, idx) => {
     // if (idx >= 10) return;
-    // if (idx < 0 || idx >= 30) return;
+    if (idx < 00 || idx >= 60) return;
     quizData.push([
         viet1[idx], 
         // item , 
