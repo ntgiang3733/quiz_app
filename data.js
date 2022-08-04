@@ -44,20 +44,31 @@ var quizData = [
 //     'ko ko', 'so ko', 'a so ko', 'do ko', 'ko chi ra', 'so chi ra', 'a chi ra', 'do chi ra', 'kiyo shi tsu', 'shiyo ku do', 'zi mu shiyo', 'kai ghi shi tsu', 'e ke tsu ke', 'ro bi', 'he ya', 'toi re (o te a rai)', 'kai dan', 'e re be ta', 'e su ka re ta', 'o ku ni', 'kai shiya', 'u chi', 'den wa', 'ku tsu', 'ne ku tai', 'wa in', 'ta ba ko', 'u ri ba', 'sa ka', 'kai (gai)', 'nan gai', 'en', 'I ku ra', 'hiya ku', 'sen', 'man', 'su mi ma sen', 'de go zai ma si', 'mi se te ku da sai', 'ziya', '[wo] ku da sai', 'shin o o sa ka', 'I ta ri a', 'sui su'
 // ];
 
-//---------------------------Bai 3-----------------------------
+//---------------------------Bai 6-----------------------------
+// var hiragana = [
+//     'たべます', 'のみます', 'すいます [たばこを～]', 'みます', 'ききます', 'よみます', 'かきます', 'かいます', 'とります [しゃしんを～]', 'します', 'あいます [ともだちに～]', 'ごはん', 'あさごはん', 'ひるごはん', 'ばんごはん', 'パン', 'たまご', 'にく', 'さかな', 'やさい', 'くだもの', 'みず', 'おちゃ', 'こうちゃ', 'ぎゅうにゅう (ミルク)', 'ジュース', 'ビール', '[お]さけ', 'ビデオ', 'えいが', 'ＣＤ', 'てがみ', 'レポート', 'しゃしん', 'みせ', 'レストラン', 'にわ', 'しゅくだい', 'テニス', 'サッカー', '[お]はなみ', 'なに', 'いっしょに', 'ちょっと', 'いつも', 'ときどき', 'それから', 'ええ', 'いいですね。', 'わかりました。', 'なんですか', 'じゃ、また[あした]。', 'メキシコ'
+// ];
+// var viet1 = [
+//     'ăn', 'uống', 'hút [thuốc lá]', 'xem, nhìn, trông', 'nghe', 'đọc', 'viết, vẽ', 'mua', 'chụp [ảnh]', 'làm', 'gặp [bạn]', 'cơm, bữa ăn', 'cơm sáng', 'cơm trưa', 'cơm tối', 'bánh mì', 'trứng', 'thịt', 'cá', 'rau', 'hoa quả, trái cây', 'nước', 'trà (nói chung)', 'trà đen', 'sữa bò', 'nước hoa quả', 'bia', 'rượu, rượu sake', 'video, băng video, đầu video', ' phim, điện ảnh', 'đĩa CD', 'thư', 'báo cáo', 'ảnh', 'cửa hàng, tiệm', 'nhà hàng', 'vườn', 'bài tập về nhà (～をします: làm bài tập)', 'quần vợt (～をします: đánh quần vợt)', 'bóng đá (～をします: chơi bóng đá)', 'việc ngắm hoa anh đào (～をします: ngắm hoa anh đào)', 'cái gì, gì', 'cùng, cùng nhau', 'một chút', 'luôn luôn, lúc nào cũng', 'thỉnh thoảng', 'sau đó, tiếp theo', 'vâng, được (cách nói thân mật của 「はい」)', 'Được đấy nhỉ./ hay quá.', 'Tôi hiểu rồi/ vâng ạ.', 'Có gì đấy ạ?/ cái gì vậy?/ vâng có tôi. (câu trả lời khi ai đó gọi tên mình)', 'Hẹn gặp lại [ngày mai].', 'Mexico'
+// ];
+// var viet2 = [
+//     'ta be masu', 'no mi masu', 'sui masu', 'mi masu', 'ki ki masu', 'yo mi masu', 'ka ki masu', 'kai masu', 'to ri masu', 'shi masu', 'ai masu', 'go han', 'a sa go han', 'hi ru go han', 'ban go han', 'pan', 'ta ma go', 'ni ku', 'sa ka na', 'ya sai', 'ku da mo no', 'mi zu', 'o sya', 'go sya', 'ghiyu niyu (mi ru ku)', 'ziyu su', 'bi-ru', 'o sa ke', 'bi di o', 'ei ga', 'CD', 'te ga mi', 're bo- to', 'shiya shin', 'mi se', 're su to ran', 'ni wa', 'shiyu ku dai', 'te ni su', 'sak ka-', 'o ha na mi', 'na ni', 'is shiyo ni', 'sayos to', 'I tsu mo', 'to ki do ki', 'so re ka ra', 'ee', 'I de su ne', 'wa ka ri masu shi ta', 'na de su ka', 'ziya ma ta ', 'me ki shi ko'
+// ];
+
+//---------------------------Bai 7-----------------------------
 var hiragana = [
-    'たべます', 'のみます', 'すいます [たばこを～]', 'みます', 'ききます', 'よみます', 'かきます', 'かいます', 'とります [しゃしんを～]', 'します', 'あいます [ともだちに～]', 'ごはん', 'あさごはん', 'ひるごはん', 'ばんごはん', 'パン', 'たまご', 'にく', 'さかな', 'やさい', 'くだもの', 'みず', 'おちゃ', 'こうちゃ', 'ぎゅうにゅう (ミルク)', 'ジュース', 'ビール', '[お]さけ', 'ビデオ', 'えいが', 'ＣＤ', 'てがみ', 'レポート', 'しゃしん', 'みせ', 'レストラン', 'にわ', 'しゅくだい', 'テニス', 'サッカー', '[お]はなみ', 'なに', 'いっしょに', 'ちょっと', 'いつも', 'ときどき', 'それから', 'ええ', 'いいですね。', 'わかりました。', 'なんですか', 'じゃ、また[あした]。', 'メキシコ'
+    'きる', 'おくる', 'あげる', 'もらう', 'かす', 'かりる', 'かける', 'て', 'はし', 'スプーン', 'ナイフ', 'フォーク', 'はさみ', 'ファクス', 'ワープロ', 'パソコン', 'パンチ', 'ホッチキス', 'セロテープ', 'けしゴム', 'かみ', 'はな', 'シャツ', 'プレゼント', 'にもつ', 'おかね', 'きっぷ', 'クリスマス', 'ちち', 'はは', 'これから', 'おとうさん', 'おかあさん', 'もう', 'まだ', 'ごめん‌な‌さい', 'いらっしゃい', 'いってきます', 'しつれします', 'りょこう', 'おみやげ', 'ヨーロッパ'
 ];
 var viet1 = [
-    'ăn', 'uống', 'hút [thuốc lá]', 'xem, nhìn, trông', 'nghe', 'đọc', 'viết, vẽ', 'mua', 'chụp [ảnh]', 'làm', 'gặp [bạn]', 'cơm, bữa ăn', 'cơm sáng', 'cơm trưa', 'cơm tối', 'bánh mì', 'trứng', 'thịt', 'cá', 'rau', 'hoa quả, trái cây', 'nước', 'trà (nói chung)', 'trà đen', 'sữa bò', 'nước hoa quả', 'bia', 'rượu, rượu sake', 'video, băng video, đầu video', ' phim, điện ảnh', 'đĩa CD', 'thư', 'báo cáo', 'ảnh', 'cửa hàng, tiệm', 'nhà hàng', 'vườn', 'bài tập về nhà (～をします: làm bài tập)', 'quần vợt (～をします: đánh quần vợt)', 'bóng đá (～をします: chơi bóng đá)', 'việc ngắm hoa anh đào (～をします: ngắm hoa anh đào)', 'cái gì, gì', 'cùng, cùng nhau', 'một chút', 'luôn luôn, lúc nào cũng', 'thỉnh thoảng', 'sau đó, tiếp theo', 'vâng, được (cách nói thân mật của 「はい」)', 'Được đấy nhỉ./ hay quá.', 'Tôi hiểu rồi/ vâng ạ.', 'Có gì đấy ạ?/ cái gì vậy?/ vâng có tôi. (câu trả lời khi ai đó gọi tên mình)', 'Hẹn gặp lại [ngày mai].', 'Mexico'
+    'cắt', 'gửi', 'tặng', 'nhận', 'cho mượn', 'mượn', 'mang', 'tay', 'cầu', 'muỗng', 'con dao', 'nĩa', 'cái kéo', 'máy fax', 'máy đánh chữ', 'máy tính', ' cái đục lỗ', ' cái dập ghim', 'băng dính', 'cục tẩy', 'tóc', 'hoa', 'áo sơ mi', 'quà tặng', 'hàng hóa', 'tiền', 'vé (tàu ,xe)', 'Lễ Giáng sinh', 'cha mình', ' mẹ mình', 'từ bây giờ-', 'cha ( người khác)', 'mẹ (người khác)', 'đã rồi', 'vẫn còn , vẫn chưa', 'xin lỗi', 'xin mời', 'tôi đi đây', 'xin thất lễ', 'du lịch', 'quà lưu niệm', 'Châu Âu'
 ];
 var viet2 = [
-    'ta be masu', 'no mi masu', 'sui masu', 'mi masu', 'ki ki masu', 'yo mi masu', 'ka ki masu', 'kai masu', 'to ri masu', 'shi masu', 'ai masu', 'go han', 'a sa go han', 'hi ru go han', 'ban go han', 'pan', 'ta ma go', 'ni ku', 'sa ka na', 'ya sai', 'ku da mo no', 'mi zu', 'o sya', 'go sya', 'ghiyu niyu (mi ru ku)', 'ziyu su', 'bi-ru', 'o sa ke', 'bi di o', 'ei ga', 'CD', 'te ga mi', 're bo- to', 'shiya shin', 'mi se', 're su to ran', 'ni wa', 'shiyu ku dai', 'te ni su', 'sak ka-', 'o ha na mi', 'na ni', 'is shiyo ni', 'sayos to', 'I tsu mo', 'to ki do ki', 'so re ka ra', 'ee', 'I de su ne', 'wa ka ri masu shi ta', 'na de su ka', 'ziya ma ta ', 'me ki shi ko'
+    'ki ru', 'o ku ru', 'a ghe ru', 'mo ra u', 'ka su', 'ka ri ru', 'ka ke ru', 'te', 'ke shi', 'su pu-n', 'na i fu', 'fuo-ku', 'ha ki mi', 'fuo ku su', 'wa-pu ro', 'pan kon', 'pan chi', 'hoc chi ki su', 'se ro te-pu', 'ke shi go mu', 'ka mi', 'ha na', 'shiya tsu', 'pu re zen to', 'ni mo tsu', 'o ka ne', 'kip pu', 'ku ri su ma su', 'sa sa', 'ha ha', 'ko re ka ra', 'o to u san', 'o ka u san', 'mo u', 'ma da', 'go men na sai', 'i ras shiyai', 'it te ki ma su', 'shi tsu re shi ma su', 'riyo kou', 'o mi ya ghe', 'yo-rop pa'
 ];
 
 hiragana.forEach((item, idx) => {
-    // if (idx >= 10) return;
-    if (idx < 00 || idx >= 60) return;
+    if (idx >= 10) return;
+    // if (idx < 00 || idx >= 60) return;
     quizData.push([
         viet1[idx], 
         // item , 
