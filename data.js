@@ -56,14 +56,25 @@ var quizData = [
 // ];
 
 //---------------------------Bai 7-----------------------------
+// var hiragana = [
+//     'きる', 'おくる', 'あげる', 'もらう', 'かす', 'かりる', 'かける', 'て', 'はし', 'スプーン', 'ナイフ', 'フォーク', 'はさみ', 'ファクス', 'ワープロ', 'パソコン', 'パンチ', 'ホッチキス', 'セロテープ', 'けしゴム', 'かみ', 'はな', 'シャツ', 'プレゼント', 'にもつ', 'おかね', 'きっぷ', 'クリスマス', 'ちち', 'はは', 'これから', 'おとうさん', 'おかあさん', 'もう', 'まだ', 'ごめん‌な‌さい', 'いらっしゃい', 'いってきます', 'しつれします', 'りょこう', 'おみやげ', 'ヨーロッパ'
+// ];
+// var viet1 = [
+//     'cắt', 'gửi', 'tặng', 'nhận', 'cho mượn', 'mượn', 'mang', 'tay', 'cầu', 'muỗng', 'con dao', 'nĩa', 'cái kéo', 'máy fax', 'máy đánh chữ', 'máy tính', ' cái đục lỗ', ' cái dập ghim', 'băng dính', 'cục tẩy', 'tóc', 'hoa', 'áo sơ mi', 'quà tặng', 'hàng hóa', 'tiền', 'vé (tàu ,xe)', 'Lễ Giáng sinh', 'cha mình', ' mẹ mình', 'từ bây giờ-', 'cha ( người khác)', 'mẹ (người khác)', 'đã rồi', 'vẫn còn , vẫn chưa', 'xin lỗi', 'xin mời', 'tôi đi đây', 'xin thất lễ', 'du lịch', 'quà lưu niệm', 'Châu Âu'
+// ];
+// var viet2 = [
+//     'ki ru', 'o ku ru', 'a ghe ru', 'mo ra u', 'ka su', 'ka ri ru', 'ka ke ru', 'te', 'ke shi', 'su pu-n', 'na i fu', 'fuo-ku', 'ha ki mi', 'fuo ku su', 'wa-pu ro', 'pan kon', 'pan chi', 'hoc chi ki su', 'se ro te-pu', 'ke shi go mu', 'ka mi', 'ha na', 'shiya tsu', 'pu re zen to', 'ni mo tsu', 'o ka ne', 'kip pu', 'ku ri su ma su', 'sa sa', 'ha ha', 'ko re ka ra', 'o to u san', 'o ka u san', 'mo u', 'ma da', 'go men na sai', 'i ras shiyai', 'it te ki ma su', 'shi tsu re shi ma su', 'riyo kou', 'o mi ya ghe', 'yo-rop pa'
+// ];
+
+//---------------------------Bai 9-----------------------------
 var hiragana = [
-    'きる', 'おくる', 'あげる', 'もらう', 'かす', 'かりる', 'かける', 'て', 'はし', 'スプーン', 'ナイフ', 'フォーク', 'はさみ', 'ファクス', 'ワープロ', 'パソコン', 'パンチ', 'ホッチキス', 'セロテープ', 'けしゴム', 'かみ', 'はな', 'シャツ', 'プレゼント', 'にもつ', 'おかね', 'きっぷ', 'クリスマス', 'ちち', 'はは', 'これから', 'おとうさん', 'おかあさん', 'もう', 'まだ', 'ごめん‌な‌さい', 'いらっしゃい', 'いってきます', 'しつれします', 'りょこう', 'おみやげ', 'ヨーロッパ'
+    'わかります','あります','すき[な]','きらい[な]','じょうず[な]','へた[な]','りょうり','のみもの','スポーツ','やきゅう','ダンス','おんがく','うた','クラシック','ジャズ','コンサート','カラオケ','かぶき','え','じ','かんじ','ひらがな','かたかな','ローマじ','こまかいおかね','チケット','じかん','ようじ','やくそく','ごしゅじん','おっと/しゅじん','おくさん','つま/かない','こども','よく','だいたい','たくさん','すこし','ぜんぜん','はやく','～から','どうして','ざんねんです[ね]','すみません','もしもし','ああ','いっしょにいかがですか','[～は]ちょっと….','だめですか。','またこんどおねがいします'
 ];
 var viet1 = [
-    'cắt', 'gửi', 'tặng', 'nhận', 'cho mượn', 'mượn', 'mang', 'tay', 'cầu', 'muỗng', 'con dao', 'nĩa', 'cái kéo', 'máy fax', 'máy đánh chữ', 'máy tính', ' cái đục lỗ', ' cái dập ghim', 'băng dính', 'cục tẩy', 'tóc', 'hoa', 'áo sơ mi', 'quà tặng', 'hàng hóa', 'tiền', 'vé (tàu ,xe)', 'Lễ Giáng sinh', 'cha mình', ' mẹ mình', 'từ bây giờ-', 'cha ( người khác)', 'mẹ (người khác)', 'đã rồi', 'vẫn còn , vẫn chưa', 'xin lỗi', 'xin mời', 'tôi đi đây', 'xin thất lễ', 'du lịch', 'quà lưu niệm', 'Châu Âu'
+    'hiểu, nắm được','có (sở hữu)','thích','ghét, không thích','giỏi, khéo','kém','món ăn, việc nấu ăn','đồ uống','thể thao (～をします：chơi thể thao)','bóng chày (～をします：chơi bóng chày)','nhảy, khiêu vũ (～をします：nhảy, khiêu vũ)','âm nhạc','bài hát','nhạc cổ điển','nhạc jazz','buổi hòa nhạc','karaoke','Kabuki (một loại ca kịch truyền thống của Nhật)','Tranh, hội họa','chữ','chữ hán','chữ Hiragana','Chữ Katakana','chữ La Mã','tiền lẻ','vé (xem hòa nhạc, xem phim)','thời gian','việc bận, công chuyện','cuộc hẹn, lời hứa','chồng (dùng khi nói về chồng người khác)','chồng (dùng khi nói về chồng mình)','vợ (dùng khi nói về vợ người khác)','vợ (dùng khi nói về vợ mình)','con cái','tốt, rõ (chỉ mức độ)','đại khái, đại thể','nhiều','ít, một ít','hoàn toàn ~ không','sớm, nhanh','vì ~','tại sao','Thật đáng tiếc nhỉ/ buồn nhỉ','Xin lỗi','a-lô','a (cách nói khi đã gặp được đúng người trên điện thoại)','Anh/chị cùng ~ (làm cái gì đó) với chúng tôi được không?','[~ thì] có lẽ không được rồi. (cách từ chối khéo khi nhận được một lời mời nào đó)','Không được à?','hẹn lần sau',
 ];
 var viet2 = [
-    'ki ru', 'o ku ru', 'a ghe ru', 'mo ra u', 'ka su', 'ka ri ru', 'ka ke ru', 'te', 'ke shi', 'su pu-n', 'na i fu', 'fuo-ku', 'ha ki mi', 'fuo ku su', 'wa-pu ro', 'pan kon', 'pan chi', 'hoc chi ki su', 'se ro te-pu', 'ke shi go mu', 'ka mi', 'ha na', 'shiya tsu', 'pu re zen to', 'ni mo tsu', 'o ka ne', 'kip pu', 'ku ri su ma su', 'sa sa', 'ha ha', 'ko re ka ra', 'o to u san', 'o ka u san', 'mo u', 'ma da', 'go men na sai', 'i ras shiyai', 'it te ki ma su', 'shi tsu re shi ma su', 'riyo kou', 'o mi ya ghe', 'yo-rop pa'
+    'wa ka ri ma su ','a ri ma su ','su ki [ na ] ','ki rai [ na ] ','ziyo zu [ na ] ','he ta [ na ] ','riyo ri ','no mi mo no ','su po ー tsu ','ya kiyu','dan su ','on ga ku ','u ta ','ku ra shik ku ','jiya zu ','kon sa ー to ','ka ra o ke ','ka bu ki ','e ','ji ','kan ji ','hi ra ga na ','ka ta ka na ','ro ー ma ji ','ko ma kai o ka ne ','chi ket to ','ji kan ','yo ji ','ya ku so ku ','go shiyu jin ','ot to / shiyu jin ','o ku san ','tsu ma / ka nai ','ko do mo ','yo ku ','dai tai ','ta ku san ','su ko shi ','zen zen ','ha ya ku ','～ ka ra ','do shi te ','zan nen de su [ ne ] ','su mi ma sen ','mo shi mo shi ','a a ','is shiyo ni ka ga de su ka ','[ ～ ha ] chiyot to … . ','da me de su ka 。 ','ma ta kon do ne gai shi ma su '
 ];
 
 hiragana.forEach((item, idx) => {
